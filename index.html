@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" type="text/css" href="./style/login.css">
+</head>
+
+<body>
+    <!-- form to admin login -->
+    <div class="home-div">
+        <a href="./html/home.html">home</a>
+    </div>
+    <div id="login">
+        <form name='form-login' onsubmit="event.preventDefault(); logIn();" method="post">
+            <span class="fontawesome-user"></span>
+            <input type="text" id="user" placeholder="email" required>
+
+            <span class="fontawesome-lock"></span>
+            <input type="password" id="password" placeholder="Password" required>
+
+            <input type="submit" value="Login">
+
+        </form>
+    </div>
+    <script src="./javascript/login.js"></script>
+</body>
+
+</html>

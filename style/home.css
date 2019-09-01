@@ -1,0 +1,402 @@
+* {
+    box-sizing: border-box;
+}
+
+.cover {
+    background-image: url('https://images.unsplash.com/photo-1445052520430-32c8ebc92fe3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ef2a28d65008720054e155d5ba3f29a6&auto=format&fit=crop&w=1650&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    padding: 2em;
+}
+
+.cover__content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.top-section {
+    background-color: #fff;
+    color: #555c62;
+    padding: 3em;
+    margin-bottom: 4em;
+}
+
+.top-section__content {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.top-section .content-preview {
+    flex: 0 1 230px;
+}
+
+@media screen and (max-width: 520px) {
+    .top-section .content-preview {
+        flex-grow: 1;
+    }
+}
+
+.logo {
+    display: none;
+}
+
+.title {
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+
+.title__text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 3em;
+    flex-grow: 1;
+    letter-spacing: 0.025em;
+    margin-bottom: 0.33em;
+}
+
+@media screen and (min-width: 520px) {
+    .title__text {
+        font-size: 4em;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .title__text {
+        font-size: 6em;
+    }
+}
+
+.title__details {
+    font-weight: 400;
+}
+
+.title a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.title a:hover {
+    color: #fbd5b0;
+}
+
+.content-preview {
+    padding: 0.5em;
+    justify-self: start;
+}
+
+@media screen and (min-width: 700px) {
+    .content-preview--left {
+        text-align: right;
+        justify-self: end;
+    }
+}
+
+.content-preview__cat,
+.content-preview__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+}
+
+.content-preview__cat {
+    text-decoration: underline;
+    margin-bottom: 0.25em;
+}
+
+.content-preview__title {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.content-preview__excerpt {
+    text-transform: lowercase;
+    font-weight: 300;
+}
+
+.lower-section {
+    margin: 0 1em;
+    grid-template-columns: 10% 2fr 10px 2fr 10%;
+    grid-auto-flow: row dense;
+}
+
+@media screen and (min-width: 700px) {
+    .lower-section {
+        display: grid;
+        margin-top: 8em;
+    }
+}
+
+.lower-section .content-preview {
+    max-width: 240px;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.lower-section .content-preview--top {
+    margin-top: 2em;
+}
+
+.lower-section .content-preview--bottom {
+    margin-bottom: 2.5em;
+}
+
+.headline {
+    grid-row: 2;
+    grid-column: -1;
+    display: flex;
+}
+
+.boxed-headline {
+    text-align: center;
+    padding: 1em;
+    border: 1px solid #fff;
+    position: relative;
+    flex: 1 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    line-height: 1.3;
+    font-size: 1.2em;
+    font-weight: 900;
+    max-width: 100%;
+}
+
+.boxed-headline:before {
+    content: "";
+    position: absolute;
+    border: inherit;
+    left: 0.5em;
+    right: 0.5em;
+    top: -0.5em;
+    bottom: -0.5em;
+}
+
+.line {
+    position: relative;
+}
+
+@media screen and (max-width: 520px) {
+    .line {
+        display: none;
+    }
+}
+
+.line:before {
+    content: '';
+    height: 0.8em;
+    width: 0.8em;
+    background: #fff;
+    display: block;
+    position: absolute;
+}
+
+.line:after {
+    content: '';
+    border-color: #fff;
+    position: absolute;
+    display: block;
+}
+
+.line--vertical {
+    grid-column: 3;
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+    .line--vertical {
+        display: block;
+    }
+}
+
+.line--vertical:after {
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid;
+}
+
+.line--vertical:before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.line--bottom:before {
+    bottom: 0;
+}
+
+.line--horizontal {
+    flex: 1 0 30px;
+}
+
+.line--horizontal:after {
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 1px solid;
+}
+
+.line--horizontal:before {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line--right:before {
+    right: 0;
+}
+
+
+/* article-section */
+.article-section {
+    background: #eee3c8;
+    margin: 0;
+    padding: 0 0 15px;
+}
+
+article {
+    margin: auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 0.5em;
+}
+
+.article-section h1,
+.article-section cite,
+.article-section img,
+.article-section aside,
+.article-section main {
+    grid-column: 2;
+}
+
+.article-section main {
+    max-width: 450px;
+    margin: auto;
+    text-align: justify;
+}
+
+.article-section img {
+    width: 100%;
+}
+
+.article-section p:first-child {
+    margin-top: 0;
+}
+
+.article-section p:last-child::after {
+    content: ' ■';
+    opacity: 0.2;
+}
+
+/* Title Layout */
+.article-section h1 span {
+    display: block;
+}
+
+.focusing {
+    margin-bottom: -10px;
+}
+
+.the {
+    transform: translateY(50%);
+    background: #eee3c8;
+    width: 50px;
+    margin: auto;
+}
+
+.heart {
+    border: thin solid black;
+    border-width: thin 0;
+    padding: 10px 0 0;
+}
+
+/* Typography */
+.article-section h1 {
+    text-align: center;
+}
+
+.focusing {
+    font-family: 'questa-grande';
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.the {
+    font-family: 'brandon-grotesque';
+    text-transform: uppercase;
+    font-size: 0.5em;
+}
+
+.heart {
+    font-family: 'ltc-bodoni-175';
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.article-section cite {
+    font-family: 'brandon-grotesque';
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.name {
+    font-weight: 900;
+}
+
+.article-section main {
+    font-family: 'abril-text';
+}
+
+.dropcap {
+    font-family: 'brandon-grotesque';
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+}
+
+.article-section aside {
+    font-family: 'brandon-grotesque';
+    font-style: italic;
+    text-align: right;
+}
+
+@media only screen and (min-width: 750px) {
+
+    /* Layout */
+    /* Title */
+    .article-section {
+        padding: 30px 0;
+    }
+
+    .article-section article {
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-gap: 1.5em;
+    }
+
+    .article-section main {
+        margin: 0;
+    }
+
+    .article-section aside {
+        grid-column: 1;
+        grid-row: 4;
+        margin-top: 7em;
+    }
+
+    .article-section .focusing {
+        font-size: 2.2em;
+        margin-bottom: -15px;
+    }
+
+    .the {
+        font-size: 0.75em;
+    }
+
+    .heart {
+        font-size: 4em;
+    }
+}
