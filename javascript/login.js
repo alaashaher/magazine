@@ -1,6 +1,5 @@
 var users = [
-    { id: 1, Email: "alaa@gmail.com", password: "123456" },
-    { id: 2, Email: "mohammed@gmail.com", password: "013579" }
+    { id: 1, Email: "alaa@gmail.com", password: "123456" }
 ];
 function logIn () {            
     let userEntered = document.getElementById("user").value;
