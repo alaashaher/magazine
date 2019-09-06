@@ -23,7 +23,7 @@ ul li {
     background: #111111;
     color: rgba(255, 255, 255, 0.5);
     cursor: default;
-    height: 3.25rem;
+    height: 5.2rem;
     left: 0;
     line-height: 3.25rem;
     position: fixed;
@@ -65,7 +65,7 @@ ul li {
     }
 
     #header {
-        height: 44px;
+        height: 71px;
         line-height: 44px;
     }
 }
@@ -97,7 +97,7 @@ figure {
 
 img {
     height: auto;
-    width: 100%;
+    width: 49%;
 }
 
 .wrapper {
